@@ -24,10 +24,17 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
   const variants = {
-    primary: "bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-semibold shadow-lg shadow-cyan-600/20 hover:shadow-cyan-600/35 border border-cyan-500/20",
-    secondary: "bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 hover:border-cyan-600/50 shadow-sm font-semibold",
-    outline: "border-2 border-cyan-600 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-700 font-semibold",
-    ghost: "text-slate-700 hover:text-cyan-700 hover:bg-slate-200/50 font-medium"
+    primary:
+    "bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-semibold shadow-lg shadow-cyan-600/20 hover:shadow-cyan-600/35 border border-cyan-500/20",
+
+  secondary:
+    "bg-white hover:bg-slate-100 text-blue-900 hover:text-blue-950 border border-slate-300 hover:border-cyan-600/50 shadow-sm font-semibold",
+
+  outline:
+    "border-2 border-blue-900 text-blue-900 hover:bg-blue-50 hover:border-blue-950 font-semibold",
+
+  ghost:
+    "text-blue-900 hover:text-cyan-700 hover:bg-slate-200/50 font-medium",
   };
 
   const sizes = {
