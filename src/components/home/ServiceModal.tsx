@@ -121,7 +121,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) 
               size="sm"
               icon={<ArrowRight className="w-4 h-4" />}
               onClick={onClose}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto !bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
             >
               Inquire About {service.title}
             </Button>
