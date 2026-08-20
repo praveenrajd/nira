@@ -10,9 +10,9 @@ export const Header: React.FC = () => {
   const isScrolled = useHeaderScroll(40);
   const sectionIds = NAVIGATION_LINKS.map(link => link.href.replace('#', ''));
   const activeSection = useScrollSpy(sectionIds, 120);
-  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const isLeadershipPage = window.location.hash === '#leadership';
   const getNavigationHref = (href: string) => (
-    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+    isLeadershipPage && href !== '#leadership' && href.startsWith('#') ? `/${href}` : href
   );
 
   return (
@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
               {NAVIGATION_LINKS.map((link) => {
-                const isActive = link.href === '/leadership'
+                const isActive = link.href === '#leadership'
                   ? isLeadershipPage
                   : activeSection === link.href.replace('#', '');
                 return (

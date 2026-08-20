@@ -4,9 +4,9 @@ import { NAVIGATION_LINKS, COMPANY_INFO } from '../../data/navigation';
 import { LOOKING_AHEAD_DATA } from '../../data/content';
 
 export const Footer: React.FC = () => {
-  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const isLeadershipPage = window.location.hash === '#leadership';
   const getNavigationHref = (href: string) => (
-    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+    isLeadershipPage && href !== '#leadership' && href.startsWith('#') ? `/${href}` : href
   );
 
   const scrollToTop = () => {

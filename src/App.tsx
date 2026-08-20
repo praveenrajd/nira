@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSEO } from './hooks/useSEO';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
@@ -17,7 +17,18 @@ export const App: React.FC = () => {
   // Initialize SEO Meta Tags
   useSEO();
 
-  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const [isLeadershipPage, setIsLeadershipPage] = useState(
+    () => window.location.hash === '#leadership'
+  );
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setIsLeadershipPage(window.location.hash === '#leadership');
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   if (isLeadershipPage) {
     return <LeadershipPage />;

@@ -15,9 +15,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   activeSection
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
-  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const isLeadershipPage = window.location.hash === '#leadership';
   const getNavigationHref = (href: string) => (
-    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+    isLeadershipPage && href !== '#leadership' && href.startsWith('#') ? `/${href}` : href
   );
 
   // Close on Escape key press
@@ -87,7 +87,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           {/* Navigation Links */}
           <nav className="mt-8 space-y-1.5">
             {NAVIGATION_LINKS.map((link) => {
-              const isActive = link.href === '/leadership'
+              const isActive = link.href === '#leadership'
                 ? isLeadershipPage
                 : activeSection === link.href.replace('#', '');
               return (
