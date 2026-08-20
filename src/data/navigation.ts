@@ -15,6 +15,6 @@ export const COMPANY_INFO = {
   tagline: 'Your Regulatory & Scientific Partner in Homoeopathy',
   slogan: 'Partnering with Industry. Strengthening Science. Preparing for Regulation.',
   email: 'info@nirascientificsolutions.com',
-  phone: '+91 (011) 4567-8900',
+  phone: '+91 72178 40169',
   address: 'Regulatory & Scientific Center, New Delhi, India',
 };

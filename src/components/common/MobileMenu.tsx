@@ -110,9 +110,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           <Button
             asAnchor
             href="/#contact"
-            variant="primary"
+            variant="secondary"
             size="lg"
-            className="w-full text-white"
+            className="w-full !bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
             onClick={onClose}
           >
             Schedule Consultation

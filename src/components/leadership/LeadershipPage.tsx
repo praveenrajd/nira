@@ -58,7 +58,7 @@ export const LeadershipPage: React.FC = () => {
                   <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-white">Anuj Arora</h2>
                   <p className="mt-3 text-sm font-semibold text-slate-200">Founder, Nira Scientific Solutions</p>
                   <div className="mt-8 pt-6 border-t border-white/15 space-y-3 text-sm text-slate-300">
-                    <p className="flex items-start gap-2.5"><GraduationCap className="w-4 h-4 text-cyan-200 shrink-0 mt-0.5" /> Shri Ram College of Commerce, University of Delhi</p>
+                    <p className="flex items-start gap-2.5"><GraduationCap className="w-4 h-4 text-cyan-200 shrink-0 mt-0.5" /> Business and strategic leadership</p>
                     <p className="flex items-start gap-2.5"><Handshake className="w-4 h-4 text-cyan-200 shrink-0 mt-0.5" /> About three decades in homoeopathy and pharmaceutical industry engagement</p>
                   </div>
                 </div>
@@ -99,10 +99,22 @@ export const LeadershipPage: React.FC = () => {
                   He holds a <strong className="text-slate-900">Bachelor of Business Administration (BBA) in Business Intelligence and Business Administration from Amity International Business School</strong>, with an academic foundation in business management, business intelligence, data analysis and strategic decision-making.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  At Nira, Siddharth brings a <strong className="text-slate-900">data-driven and technology-oriented approach to business development</strong>. His focus includes identifying market opportunities, developing growth strategies, building strategic relationships and translating business insights into practical initiatives that support Nira's long-term growth.
+                  While completing his graduation, Siddharth was actively involved in the <strong className="text-slate-900">business strategy and development of the family's professional publications, <em>Homoeopathy for All</em> and <em>Advancements in Homoeopathic Research</em></strong>. This provided him with practical experience in understanding markets, developing business initiatives, engaging with industry stakeholders, supporting revenue and growth strategies, and working within the professional homoeopathic publishing and pharmaceutical ecosystem.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  He also has a strong interest and working capability in <strong className="text-slate-900">Artificial Intelligence and AI-enabled business tools</strong>, applying emerging technologies to market research, business analysis, strategic planning, content development, workflow optimisation and business decision-making.
+                  This combination of <strong className="text-slate-900">formal business education and hands-on strategic experience</strong> has shaped his approach to business development and growth.
+                </p>
+                <p className="text-slate-600 leading-relaxed">
+                  At Nira, Siddharth brings a <strong className="text-slate-900">data-driven, technology-oriented and growth-focused approach</strong> to developing the organisation. His areas of focus include business strategy, market research, business development, strategic partnerships, market expansion and identifying new opportunities for Nira in India and international markets.
+                </p>
+                <p className="text-slate-600 leading-relaxed">
+                  He also has a strong interest and working capability in <strong className="text-slate-900">Artificial Intelligence and AI-enabled business tools</strong>, using emerging technologies to support market research, business analysis, strategic planning, content development, workflow optimisation and informed business decision-making.
+                </p>
+                <p className="text-slate-600 leading-relaxed">
+                  His role complements Nira's scientific and regulatory capabilities by bringing together <strong className="text-slate-900">business strategy, business intelligence, technology and market-focused execution</strong>.
+                </p>
+                <p className="text-slate-600 leading-relaxed">
+                  As Nira expands its services, Siddharth is focused on developing sustainable business partnerships and helping position Nira as a <strong className="text-slate-900">modern, technology-enabled strategic partner for the homoeopathic pharmaceutical industry in India and international markets</strong>.
                 </p>
               </div>
             </article>

@@ -54,7 +54,7 @@ export const LookingAheadSection: React.FC = () => {
 
           {/* Final Brand Banner Card */}
           <div className="p-8 rounded-2xl bg-gradient-to-br from-white via-cyan-50/40 to-emerald-50/40 border border-cyan-200 shadow-md text-center space-y-4">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600 to-emerald-600 text-white font-bold mb-2 shadow-md">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0b1f3a] text-white font-bold mb-2 shadow-md shadow-[#0b1f3a]/20">
               <ShieldCheck className="w-6 h-6" />
             </div>
 
