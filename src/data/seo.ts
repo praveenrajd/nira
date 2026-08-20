@@ -1,7 +1,7 @@
 export const SEO_DATA = {
   defaultTitle: "NIRA SCIENTIFIC SOLUTIONS | Regulatory & Scientific Partner in Homoeopathy",
   titleTemplate: "%s | Nira Scientific Solutions",
-  description: "Nira Scientific Solutions is a specialised regulatory and scientific partner for homoeopathic pharmaceutical companies, supporting regulatory pathway assessment, scientific documentation, research, CDSCO-related support, and dossier preparation.",
+  description: "Nira Scientific Solutions is a specialised regulatory and scientific partner for homoeopathic pharmaceutical companies, providing CDSCO support, regulatory strategy, scientific documentation, research coordination, evidence generation, product development and dossier preparation.",
   siteUrl: "https://nirascientific.com",
   ogImage: "https://nirascientific.com/og-image.png",
   twitterHandle: "@NiraScientific",
@@ -21,7 +21,16 @@ export const SEO_DATA = {
     "Regulatory submissions",
     "CDSCO-related support",
     "Scientific literature",
-    "Evidence generation"
+    "Evidence generation",
+    "Homoeopathic medicine regulatory consulting",
+    "Homoeopathic pharmaceutical regulatory support",
+    "CDSCO dossier preparation",
+    "Scientific and regulatory preparedness",
+    "Anuj Arora Nira Scientific Solutions",
+    "Siddharth Arora Nira Scientific Solutions",
+    "Business strategy and growth",
+    "AI-enabled business tools",
+    "Strategic partnerships"
   ]
 };
 
@@ -33,7 +42,7 @@ export const SCHEMA_ORG_JSON_LD = {
       "@id": "https://nirascientific.com/#organization",
       "name": "Nira Scientific Solutions",
       "url": "https://nirascientific.com",
-      "logo": "https://nirascientific.com/favicon.svg",
+      "logo": "https://nirascientific.com/logo.png",
       "description": "Specialised regulatory and scientific partner for homoeopathic pharmaceutical companies.",
       "slogan": "Partnering with Industry. Strengthening Science. Preparing for Regulation.",
       "knowsAbout": [
@@ -42,7 +51,21 @@ export const SCHEMA_ORG_JSON_LD = {
         "Scientific Dossier Preparation",
         "Clinical Research Coordination",
         "Evidence-Based Product Development",
-        "Scientific Documentation"
+        "Scientific Documentation",
+        "Homoeopathic Medicine Product Development",
+        "Regulatory Preparedness",
+        "Business Strategy and Strategic Partnerships"
+      ],
+      "founder": {
+        "@id": "https://nirascientific.com/#anuj-arora"
+      },
+      "employee": [
+        {
+          "@id": "https://nirascientific.com/#anuj-arora"
+        },
+        {
+          "@id": "https://nirascientific.com/#siddharth-arora"
+        }
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -51,6 +74,48 @@ export const SCHEMA_ORG_JSON_LD = {
         "areaServed": ["IN", "Worldwide"],
         "availableLanguage": ["English"]
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nirascientific.com/#anuj-arora",
+      "name": "Anuj Arora",
+      "jobTitle": "Founder and Strategic Advisor",
+      "worksFor": {
+        "@id": "https://nirascientific.com/#organization"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shri Ram College of Commerce, University of Delhi"
+      },
+      "knowsAbout": [
+        "Homoeopathic Pharmaceutical Industry",
+        "Scientific Publishing",
+        "Regulatory Preparedness",
+        "Business Development"
+      ],
+      "description": "Founder and Strategic Advisor at Nira Scientific Solutions with about three decades of engagement with the homoeopathic profession and pharmaceutical industry."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nirascientific.com/#siddharth-arora",
+      "name": "Siddharth Arora",
+      "jobTitle": "Co-Founder, Business Strategy and Growth",
+      "worksFor": {
+        "@id": "https://nirascientific.com/#organization"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Amity International Business School"
+      },
+      "knowsAbout": [
+        "Business Strategy",
+        "Market Development",
+        "Strategic Partnerships",
+        "Artificial Intelligence",
+        "AI-Enabled Business Tools",
+        "Business Intelligence"
+      ],
+      "description": "Co-Founder of Nira Scientific Solutions focused on business strategy, growth, market development, strategic partnerships and AI-enabled business tools."
     },
     {
       "@type": "ProfessionalService",

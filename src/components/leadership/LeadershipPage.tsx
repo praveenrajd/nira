@@ -4,15 +4,27 @@ import { useSEO } from '../../hooks/useSEO';
 import { Button } from '../common/Button';
 import { Footer } from '../common/Footer';
 import { Header } from '../common/Header';
+import { StructuredData } from '../common/StructuredData';
 
 export const LeadershipPage: React.FC = () => {
   useSEO({
-    title: 'Leadership',
-    description: 'Meet the founders and strategic leaders behind Nira Scientific Solutions.'
+    title: 'Leadership | Founders and Strategic Advisors',
+    description: 'Meet Anuj Arora, Founder and Strategic Advisor, and Siddharth Arora, Co-Founder for Business Strategy and Growth at Nira Scientific Solutions.',
+    keywords: [
+      'Nira Scientific Solutions leadership',
+      'Anuj Arora Founder',
+      'Siddharth Arora Co-Founder',
+      'Homoeopathic pharmaceutical industry leadership',
+      'Regulatory and scientific consulting founder',
+      'Business strategy and growth',
+      'AI-enabled business tools',
+      'Strategic partnerships'
+    ]
   });
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col selection:bg-cyan-600 selection:text-white">
+      <StructuredData />
       <Header />
 
       <main id="main-content" className="flex-1 pt-28">
