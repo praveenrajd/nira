@@ -10,6 +10,10 @@ export const Header: React.FC = () => {
   const isScrolled = useHeaderScroll(40);
   const sectionIds = NAVIGATION_LINKS.map(link => link.href.replace('#', ''));
   const activeSection = useScrollSpy(sectionIds, 120);
+  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const getNavigationHref = (href: string) => (
+    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+  );
 
   return (
     <>
@@ -24,13 +28,13 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between">
             {/* Logo Brand */}
             <a
-              href="#"
+              href="/"
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600 rounded-lg p-1"
               aria-label="NIRA Scientific Solutions Home"
             >
-              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-600 via-teal-600 to-emerald-600 p-[1px] shadow-md shadow-cyan-600/20 group-hover:shadow-cyan-600/40 transition-all duration-300">
+              <div className="relative w-10 h-10 rounded-xl bg-[#0b1f3a] p-[1px] shadow-md shadow-[#0b1f3a]/20 group-hover:shadow-[#0b1f3a]/40 transition-all duration-300">
                 <div className="w-full h-full bg-white rounded-[11px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-cyan-600 group-hover:scale-110 transition-transform duration-300" />
+                  <Shield className="w-5 h-5 text-[#0b1f3a] group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -46,11 +50,13 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
               {NAVIGATION_LINKS.map((link) => {
-                const isActive = activeSection === link.href.replace('#', '');
+                const isActive = link.href === '/leadership'
+                  ? isLeadershipPage
+                  : activeSection === link.href.replace('#', '');
                 return (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={getNavigationHref(link.href)}
                     className={`px-3.5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 relative ${
                       isActive
                         ? 'text-cyan-700 font-bold bg-cyan-50 border border-cyan-200/60'
@@ -71,9 +77,10 @@ export const Header: React.FC = () => {
               <div className="hidden sm:block">
                 <Button
                   asAnchor
-                  href="#contact"
-                  variant="primary"
+                  href="/#contact"
+                  variant="secondary"
                   size="sm"
+                  className="!bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
                 >
                   Schedule Consultation
                 </Button>

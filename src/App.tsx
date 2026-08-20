@@ -11,10 +11,17 @@ import { WhyNiraSection } from './components/home/WhyNiraSection';
 import { PartnershipModelSection } from './components/home/PartnershipModelSection';
 import { LookingAheadSection } from './components/home/LookingAheadSection';
 import { ContactSection } from './components/home/ContactSection';
+import { LeadershipPage } from './components/leadership/LeadershipPage';
 
 export const App: React.FC = () => {
   // Initialize SEO Meta Tags
   useSEO();
+
+  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+
+  if (isLeadershipPage) {
+    return <LeadershipPage />;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col selection:bg-cyan-600 selection:text-white">

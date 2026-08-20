@@ -15,6 +15,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   activeSection
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
+  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const getNavigationHref = (href: string) => (
+    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+  );
 
   // Close on Escape key press
   useEffect(() => {
@@ -63,7 +67,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           {/* Header */}
           <div className="flex items-center justify-between pb-6 border-b border-slate-200">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-600 to-emerald-600 flex items-center justify-center text-white font-bold">
+              <div className="w-9 h-9 rounded-lg bg-[#0b1f3a] flex items-center justify-center text-white font-bold">
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -83,11 +87,13 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           {/* Navigation Links */}
           <nav className="mt-8 space-y-1.5">
             {NAVIGATION_LINKS.map((link) => {
-              const isActive = activeSection === link.href.replace('#', '');
+              const isActive = link.href === '/leadership'
+                ? isLeadershipPage
+                : activeSection === link.href.replace('#', '');
               return (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={getNavigationHref(link.href)}
                   onClick={onClose}
                   className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold transition-all ${
                     isActive
@@ -107,10 +113,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         <div className="pt-8 border-t border-slate-200 space-y-4">
           <Button
             asAnchor
-            href="#contact"
+            href="/#contact"
             variant="primary"
             size="lg"
-            className="w-full"
+            className="w-full text-white"
             onClick={onClose}
           >
             Schedule Consultation

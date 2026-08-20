@@ -23,7 +23,7 @@ export const VisionMissionSection: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="h-full glass-card p-6 sm:p-8 border-cyan-200 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-white to-cyan-50/40 shadow-lg">
               <div className="space-y-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600 to-teal-600 flex items-center justify-center text-white shadow-md shadow-cyan-600/20">
+                <div className="w-12 h-12 rounded-xl bg-[#0b1f3a] flex items-center justify-center text-white shadow-md shadow-[#0b1f3a]/20">
                   <Eye className="w-6 h-6" />
                 </div>
 
@@ -49,7 +49,7 @@ export const VisionMissionSection: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="glass-card p-6 sm:p-8 border-emerald-200 space-y-6 bg-gradient-to-br from-white to-emerald-50/30 shadow-lg">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center text-white shadow-md shadow-emerald-600/20">
+                <div className="w-12 h-12 rounded-xl bg-[#0b1f3a] flex items-center justify-center text-white shadow-md shadow-[#0b1f3a]/20">
                   <Target className="w-6 h-6" />
                 </div>
                 <div>

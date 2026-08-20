@@ -264,11 +264,11 @@ export const ContactSection: React.FC = () => {
 
                   <Button
                     type="submit"
-                    variant="primary"
+                    variant="secondary"
                     size="lg"
                     disabled={isSubmitting}
                     icon={<Send className="w-4 h-4" />}
-                    className="w-full"
+                    className="w-full !bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
                   >
                     {isSubmitting ? 'Transmitting Request...' : 'Submit Regulatory Consultation Request'}
                   </Button>

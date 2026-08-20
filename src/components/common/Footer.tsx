@@ -4,6 +4,11 @@ import { NAVIGATION_LINKS, COMPANY_INFO } from '../../data/navigation';
 import { LOOKING_AHEAD_DATA } from '../../data/content';
 
 export const Footer: React.FC = () => {
+  const isLeadershipPage = window.location.pathname.replace(/\/+$/, '') === '/leadership';
+  const getNavigationHref = (href: string) => (
+    isLeadershipPage && href.startsWith('#') ? `/${href}` : href
+  );
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -19,9 +24,9 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Slogan */}
           <div className="space-y-4 lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-emerald-500 p-[1px]">
-                <div className="w-full h-full bg-slate-900 rounded-[11px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-cyan-400" />
+              <div className="w-10 h-10 rounded-xl bg-[#0b1f3a] p-[1px]">
+                <div className="w-full h-full bg-white rounded-[11px] flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-[#0b1f3a]" />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -50,7 +55,7 @@ export const Footer: React.FC = () => {
               {NAVIGATION_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
-                    href={link.href}
+                    href={getNavigationHref(link.href)}
                     className="text-slate-300 hover:text-cyan-300 transition-colors inline-block text-sm"
                   >
                     {link.label}

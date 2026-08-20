@@ -41,10 +41,10 @@ export const HeroSection: React.FC = () => {
             <Button
               asAnchor
               href="#core-areas"
-              variant="primary"
+              variant="secondary"
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto !bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
             >
               Explore Core Partnerships
             </Button>
@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
               href="#contact"
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto !bg-[#0b1f3a] hover:!bg-[#163b68] !text-white !border-[#0b1f3a]"
             >
               Request Regulatory Assessment
             </Button>
