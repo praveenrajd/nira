@@ -6,7 +6,7 @@ export const NAVIGATION_LINKS: NavigationItem[] = [
   { label: 'Core Areas', href: '#core-areas' },
   { label: 'Why Choose Nira', href: '#why-nira' },
   { label: 'Partnership Model', href: '#partnership-model' },
-  { label: 'Leadership', href: '#leadership' },
+  { label: 'Founders', href: '#leadership' },
   { label: 'Contact', href: '#contact' },
 ];
 

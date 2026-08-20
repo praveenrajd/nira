@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { NAVIGATION_LINKS, COMPANY_INFO } from '../../data/navigation';
 import { LOOKING_AHEAD_DATA } from '../../data/content';
 
@@ -23,16 +23,12 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Slogan */}
           <div className="space-y-4 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0b1f3a] p-[1px]">
-                <div className="w-full h-full bg-white rounded-[11px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-[#0b1f3a]" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-white text-base tracking-tight">NIRA SCIENTIFIC</span>
-                <span className="text-[10px] font-bold text-cyan-400 uppercase">SOLUTIONS</span>
-              </div>
+            <div className="inline-flex rounded-xl bg-white px-3 py-1">
+              <img
+                src="/logo.png"
+                alt="Nira Scientific Solutions"
+                className="w-36 h-20 object-contain"
+              />
             </div>
 
             <p className="text-slate-300 font-medium text-xs sm:text-sm leading-relaxed">

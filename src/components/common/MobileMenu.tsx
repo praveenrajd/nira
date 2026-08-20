@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { X, ArrowRight, Shield } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
 import { NAVIGATION_LINKS, COMPANY_INFO } from '../../data/navigation';
 import { Button } from './Button';
 
@@ -66,15 +66,11 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         <div>
           {/* Header */}
           <div className="flex items-center justify-between pb-6 border-b border-slate-200">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-[#0b1f3a] flex items-center justify-center text-white font-bold">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <span className="font-bold text-sm text-slate-900 block tracking-tight">NIRA SCIENTIFIC</span>
-                <span className="text-[10px] text-cyan-700 font-semibold block">Regulatory & Scientific</span>
-              </div>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Nira Scientific Solutions"
+              className="w-28 h-16 object-contain"
+            />
             <button
               onClick={onClose}
               className="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600"

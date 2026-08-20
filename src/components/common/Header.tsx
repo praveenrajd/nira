@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Shield } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { NAVIGATION_LINKS } from '../../data/navigation';
 import { useHeaderScroll, useScrollSpy } from '../../hooks/useScrollSpy';
 import { Button } from './Button';
@@ -32,19 +32,11 @@ export const Header: React.FC = () => {
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600 rounded-lg p-1"
               aria-label="NIRA Scientific Solutions Home"
             >
-              <div className="relative w-10 h-10 rounded-xl bg-[#0b1f3a] p-[1px] shadow-md shadow-[#0b1f3a]/20 group-hover:shadow-[#0b1f3a]/40 transition-all duration-300">
-                <div className="w-full h-full bg-white rounded-[11px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-[#0b1f3a] group-hover:scale-110 transition-transform duration-300" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 group-hover:text-cyan-700 transition-colors">
-                  NIRA SCIENTIFIC
-                </span>
-                <span className="text-[10px] sm:text-xs font-bold tracking-wider text-cyan-700 uppercase">
-                  SOLUTIONS
-                </span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="Nira Scientific Solutions"
+                className="w-28 h-16 object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+              />
             </a>
 
             {/* Desktop Navigation */}
