@@ -26,22 +26,47 @@ export const ContactSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg('');
 
-    if (!formData.name || !formData.email || !formData.company) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.company.trim()) {
       setErrorMsg('Please fill in your name, company, and email address.');
       return;
     }
 
     setIsSubmitting(true);
 
-    // Simulate clean submission handling
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/info@nirascientific.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          company: formData.company.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          service: formData.serviceCategory,
+          message: formData.message.trim(),
+          _subject: `New consultation request from ${formData.name.trim()}`,
+          _replyto: formData.email.trim(),
+          _template: 'table'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('The consultation request could not be sent.');
+      }
+
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 800);
+    } catch {
+      setIsSubmitting(false);
+      setErrorMsg('We could not send your request. Please email us directly at info@nirascientific.com.');
+    }
   };
 
   return (
