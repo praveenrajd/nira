@@ -38,7 +38,7 @@ export const ContactSection: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/info@nirascientific.com', {
+      const response = await fetch('https://formsubmit.co/ajax/info@nirascientificsolutions.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -65,7 +65,7 @@ export const ContactSection: React.FC = () => {
       setIsSubmitted(true);
     } catch {
       setIsSubmitting(false);
-      setErrorMsg('We could not send your request. Please email us directly at info@nirascientific.com.');
+      setErrorMsg('We could not send your request. Please email us directly at info@nirascientificsolutions.com.');
     }
   };
 

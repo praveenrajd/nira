@@ -70,7 +70,7 @@ export const SCHEMA_ORG_JSON_LD = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Regulatory Consultation",
-        "email": "info@nirascientific.com",
+        "email": "info@nirascientificsolutions.com",
         "areaServed": ["IN", "Worldwide"],
         "availableLanguage": ["English"]
       }
